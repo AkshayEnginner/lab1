@@ -1,0 +1,21 @@
+def dfs(graph,startnode,visited = None):
+    visited = set()
+    
+    visited.add(startnode)
+    print(startnode)
+    
+    for neigbour in graph[startnode]:
+        if neigbour not in visited:
+            dfs(graph,neigbour,visited)
+            
+graph = {
+    'A': ['B', 'C'],
+    'B': ['D', 'E'],
+    'C': ['F'],
+    'D': [],
+    'E': ['F'],
+    'F': []
+    
+}   
+
+dfs(graph,'B')
