@@ -1,0 +1,50 @@
+demo1
+public class Deemo1 {
+     public void CreateAccount(String Name,String Phone){
+        account acc = new account();
+        acc.Name = Name;
+        acc.Phone = Phone;
+        insert acc;
+        System.debug('Account has been inserted: ' +acc.name);
+        
+         
+    }
+}
+//Deemo1 acc= new Deemo1();
+//acc.CreateAccount('Akshay','1234567893');
+
+
+demo2
+public class Deemoo2 {
+    public void UpdateOlderAccount(String name){
+        List<Account> oldAccounts = new List<Account>();
+        for(Account acc: [SELECT Name from Account WHERE Phone='45687562']){
+            acc.Name = Name;
+            oldAccounts.add(acc);
+            System.debug('Account has been updated' + acc.name);
+        }
+        update oldAccounts;
+    }
+
+}
+
+//Deemo2 acc=new Demo();
+//acc.UpdateOlderAccount('ram'); 
+
+demo3
+public class Deemoo3 {
+    
+    public void DeleteAccount(){
+        List<Account> oldAccounts = new List<Account>();
+        for(Account acc:[select Name,Phone from Account where Name = 'Smita']){
+            delete acc;
+            System.debug('Account delete:' +acc.name);
+        }
+        update oldAccounts;
+    }
+
+}
+
+//Deemoo3 acc = new Deemoo3();
+//acc.DeleteAccount();
+ 
